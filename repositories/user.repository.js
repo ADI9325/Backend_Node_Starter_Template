@@ -6,7 +6,8 @@ const userRepository = {
       const user = new User(userData);
       return await user.save();
     } catch (error) {
-      throw error;
+      console.error('Error creating user:', error.message);
+      throw new AppError(400, error.message || 'Error creating user');
     }
   },
 };

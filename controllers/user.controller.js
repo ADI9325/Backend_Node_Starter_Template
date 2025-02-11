@@ -13,6 +13,7 @@ const userController = {
       const newUser = await userService.createUser(req.body);
       res.status(201).json(newUser);
     } catch (error) {
+      console.error('Error in createUser controller:', error);
       next(error);
     }
   },
