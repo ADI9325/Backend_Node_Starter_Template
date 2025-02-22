@@ -12,10 +12,7 @@ const userSchema = new mongoose.Schema({
     required: true,
     unique: true,
   },
-  phone: {
-    type: Number,
-    required: true,
-  },
+
   role_id: {
     type: Number,
     required: true,
